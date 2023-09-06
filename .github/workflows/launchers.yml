@@ -38,7 +38,7 @@ jobs:
       - run: ./mill -i upload artifacts/
         if: github.event_name == 'push'
         env:
-          UPLOAD_GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          UPLOAD_GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
   generate-static-launcher:
     runs-on: ubuntu-20.04
@@ -65,7 +65,7 @@ jobs:
       - run: ./mill -i upload artifacts/
         if: github.event_name == 'push'
         env:
-          UPLOAD_GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          UPLOAD_GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
   generate-mostly-static-launcher:
     runs-on: ubuntu-20.04
@@ -92,4 +92,4 @@ jobs:
       - run: ./mill -i upload artifacts/
         if: github.event_name == 'push'
         env:
-          UPLOAD_GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          UPLOAD_GH_TOKEN: ${{ secrets.GH_TOKEN }}
